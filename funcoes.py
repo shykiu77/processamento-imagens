@@ -188,15 +188,3 @@ def dilate(im,mask):
                         erodedim[y][x][channel] = maxvalue
             
     return np.uint8(erodedim)
-
-def main():
-    im = imread('ayaka.png')
-    imshow(erode(im,seSquare3()))
-    imshow(erode(im,seCross3()))
-    imshow(dilate(im,seSquare3()))
-    imshow(dilate(im,seCross3()))
-    
-
-if __name__ == '__main__':
-    main()
-    
